@@ -19,6 +19,17 @@ public class CustomList {
         return cities.contains(city);
     }
 
+    /**
+     * Deletes a city from the list
+     * @param city The city to delete
+     * @throws IllegalArgumentException if the city is not in the list
+     */
+    public void deleteCity(City city) {
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
 
 
     // Will be implemented later using TDD (leave blank for now)
